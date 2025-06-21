@@ -3,20 +3,24 @@
     static void Main(string[] args)
     {
         int numberOfTestCases = int.Parse(Console.ReadLine() ?? "0");
-        List<int> results = new List<int>();
+
+        List<int> results = ProcessAllTestCases(numberOfTestCases);
+
+        OutputResults(results);
+    }
+
+    static List<int> ProcessAllTestCases(int numberOfTestCases)
+    {
+        List<int> results = new List<int>(numberOfTestCases);
 
         for (int testCaseIndex = 0; testCaseIndex < numberOfTestCases; testCaseIndex++)
         {
-            int numberOfCities = int.Parse(Console.ReadLine() ?? "0");
-            int uniqueCitiesCount = ProcessCitiesAndGetUniqueCount(numberOfCities);
+            int numberOfTrips = int.Parse(Console.ReadLine() ?? "0");
+            int uniqueCitiesCount = ProcessCitiesAndGetUniqueCount(numberOfTrips);
             results.Add(uniqueCitiesCount);
         }
 
-        // Output all results after processing all inputs
-        foreach (int count in results)
-        {
-            Console.WriteLine(count);
-        }
+        return results;
     }
 
     static int ProcessCitiesAndGetUniqueCount(int numberOfCities)
@@ -30,5 +34,13 @@
         }
 
         return cities.Count;
+    }
+
+    static void OutputResults(List<int> results)
+    {
+        foreach (int count in results)
+        {
+            Console.WriteLine(count);
+        }
     }
 }
