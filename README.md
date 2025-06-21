@@ -58,10 +58,23 @@ Madrid
    ```
 3. Run the program:
    ```bash
-   dotnet run
-   ```
+   dotnet run --project ProblemA\ProblemA.csproj
 
 You will be prompted to enter the test input manually (as described above).
+
+---
+
+## ✅ Running the Tests
+
+To execute the included unit tests:
+
+1. Ensure you are in the root directory of the project.
+2. Run the following command:
+   ```bash
+   dotnet test
+   ```
+
+This will build and run all tests located in the `UnitTests.cs` file.
 
 ---
 
@@ -73,7 +86,3 @@ You will be prompted to enter the test input manually (as described above).
 - No external libraries or frameworks are used.
 
 ---
-
-## 🧾 License
-
-This project was developed as part of a timed technical assessment and is provided for evaluation purposes only.
