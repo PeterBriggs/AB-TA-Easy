@@ -6,13 +6,13 @@ using System.Collections.Generic;
  * This program takes input describing Alice's travel history and outputs
  * the count of distinct cities for each test case.
  */
-class Program
+public class Program
 {
     /*
      * Entry point of the application. Reads the number of test cases,
      * processes each test case, and outputs the results.
      */
-    static void Main()
+    public static void Main()
     {
         int numberOfTestCases = int.Parse(Console.ReadLine() ?? "0");
         List<int> results = ProcessAllTestCases(numberOfTestCases);
@@ -27,7 +27,7 @@ class Program
      * @param numberOfTestCases - The total number of test cases to process
      * @return A list containing the number of unique cities for each test case
      */
-    static List<int> ProcessAllTestCases(int numberOfTestCases)
+    public static List<int> ProcessAllTestCases(int numberOfTestCases)
     {
         List<int> results = new List<int>(numberOfTestCases);
 
@@ -49,14 +49,13 @@ class Program
      * @param numberOfCities - The number of trips/cities to process
      * @return The count of unique cities
      */
-    static int ProcessCitiesAndGetUniqueCount(int numberOfCities)
+    public static int ProcessCitiesAndGetUniqueCount(int numberOfCities)
     {
         HashSet<string> cities = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
 
         for (int cityIndex = 0; cityIndex < numberOfCities; cityIndex++)
         {
             string city = Console.ReadLine() ?? "";
-
             cities.Add(city);
         }
 
@@ -68,6 +67,6 @@ class Program
      *
      * @param results - The list of unique city counts to output
      */
-    static void OutputResults(List<int> results) =>
+    public static void OutputResults(List<int> results) =>
         results.ForEach(result => Console.WriteLine(result));
 }
