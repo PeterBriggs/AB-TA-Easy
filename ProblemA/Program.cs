@@ -2,12 +2,12 @@
 {
     static void Main(string[] args)
     {
-        int T = int.Parse(Console.ReadLine() ?? "0");
+        int numberOfTestCases = int.Parse(Console.ReadLine() ?? "0");
 
-        Console.WriteLine("Number of cases:" + T);
-        for (int t = 0; t < T; t++)
+        Console.WriteLine("Number of cases:" + numberOfTestCases);
+        for (int testCaseIndex = 0; testCaseIndex < numberOfTestCases; testCaseIndex++)
         {
-            Console.WriteLine($"Case #{t}:");
+            Console.WriteLine($"Case #{testCaseIndex}:");
         }
     }
 }
