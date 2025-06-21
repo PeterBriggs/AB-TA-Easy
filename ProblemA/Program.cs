@@ -1,4 +1,7 @@
-﻿/*
+﻿using System;
+using System.Collections.Generic;
+
+/*
  * Solution for counting the number of unique cities Alice has visited.
  * This program takes input describing Alice's travel history and outputs
  * the count of distinct cities for each test case.
