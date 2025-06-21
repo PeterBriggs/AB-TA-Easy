@@ -3,6 +3,7 @@
     static void Main(string[] args)
     {
         int numberOfTestCases = int.Parse(Console.ReadLine() ?? "0");
+        List<int> results = new List<int>();
 
         Console.WriteLine("Number of cases:" + numberOfTestCases);
 
@@ -12,9 +13,13 @@
 
             int numberOfCities = int.Parse(Console.ReadLine() ?? "0");
             int uniqueCitiesCount = ProcessCitiesAndGetUniqueCount(numberOfCities);
+            results.Add(uniqueCitiesCount);
+        }
 
-            Console.WriteLine("Unique cities:");
-            Console.WriteLine(uniqueCitiesCount);
+        // Output all results after processing all inputs
+        foreach (int count in results)
+        {
+            Console.WriteLine(count);
         }
     }
 
