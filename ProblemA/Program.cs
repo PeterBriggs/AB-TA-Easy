@@ -3,7 +3,6 @@
     static void Main(string[] args)
     {
         int numberOfTestCases = int.Parse(Console.ReadLine() ?? "0");
-
         List<int> results = ProcessAllTestCases(numberOfTestCases);
 
         OutputResults(results);
@@ -17,6 +16,7 @@
         {
             int numberOfTrips = int.Parse(Console.ReadLine() ?? "0");
             int uniqueCitiesCount = ProcessCitiesAndGetUniqueCount(numberOfTrips);
+
             results.Add(uniqueCitiesCount);
         }
 
@@ -25,11 +25,12 @@
 
     static int ProcessCitiesAndGetUniqueCount(int numberOfCities)
     {
-        HashSet<string> cities = new HashSet<string>();
+        HashSet<string> cities = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
 
         for (int cityIndex = 0; cityIndex < numberOfCities; cityIndex++)
         {
             string city = Console.ReadLine() ?? "";
+
             cities.Add(city);
         }
 
