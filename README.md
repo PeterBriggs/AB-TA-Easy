@@ -82,7 +82,7 @@ This will build and run all tests located in the `UnitTests.cs` file.
 
 - The program assumes valid input format.
 - Duplicate city names within a test case are ignored.
-- City names are case-sensitive (e.g., `Paris` ≠ `paris`).
+- City names are case-insensitive (e.g., `Paris` = `paris`).
 - No external libraries or frameworks are used.
 
 ---
