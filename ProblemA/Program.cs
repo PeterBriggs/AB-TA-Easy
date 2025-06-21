@@ -5,12 +5,8 @@
         int numberOfTestCases = int.Parse(Console.ReadLine() ?? "0");
         List<int> results = new List<int>();
 
-        Console.WriteLine("Number of cases:" + numberOfTestCases);
-
         for (int testCaseIndex = 0; testCaseIndex < numberOfTestCases; testCaseIndex++)
         {
-            Console.WriteLine($"Case #{testCaseIndex}:");
-
             int numberOfCities = int.Parse(Console.ReadLine() ?? "0");
             int uniqueCitiesCount = ProcessCitiesAndGetUniqueCount(numberOfCities);
             results.Add(uniqueCitiesCount);
@@ -29,8 +25,6 @@
 
         for (int cityIndex = 0; cityIndex < numberOfCities; cityIndex++)
         {
-            Console.WriteLine($"City #{cityIndex}:");
-
             string city = Console.ReadLine() ?? "";
             cities.Add(city);
         }
